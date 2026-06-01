@@ -1,0 +1,94 @@
+{
+  "insurancePlans": [
+    {
+      "name": "Blue Shield Basic",
+      "type": "HMO",
+      "tier": "Bronze",
+      "provider": "Blue Shield"
+    },
+    {
+      "name": "Blue Shield Plus",
+      "type": "PPO",
+      "tier": "Silver",
+      "provider": "Blue Shield"
+    },
+    {
+      "name": "Blue Shield Premium",
+      "type": "PPO",
+      "tier": "Gold",
+      "provider": "Blue Shield"
+    },
+    {
+      "name": "Aetna Essential",
+      "type": "HMO",
+      "tier": "Bronze",
+      "provider": "Aetna"
+    },
+    {
+      "name": "Aetna Select",
+      "type": "EPO",
+      "tier": "Silver",
+      "provider": "Aetna"
+    },
+    {
+      "name": "Aetna Premier",
+      "type": "PPO",
+      "tier": "Platinum",
+      "provider": "Aetna"
+    },
+    {
+      "name": "UnitedHealth Core",
+      "type": "HMO",
+      "tier": "Bronze",
+      "provider": "UnitedHealth"
+    },
+    {
+      "name": "UnitedHealth Choice",
+      "type": "PPO",
+      "tier": "Silver",
+      "provider": "UnitedHealth"
+    },
+    {
+      "name": "UnitedHealth Elite",
+      "type": "PPO",
+      "tier": "Gold",
+      "provider": "UnitedHealth"
+    },
+    {
+      "name": "Cigna Connect",
+      "type": "HMO",
+      "tier": "Bronze",
+      "provider": "Cigna"
+    },
+    {
+      "name": "Cigna Open Access",
+      "type": "EPO",
+      "tier": "Silver",
+      "provider": "Cigna"
+    },
+    {
+      "name": "Kaiser Standard",
+      "type": "HMO",
+      "tier": "Silver",
+      "provider": "Kaiser Permanente"
+    },
+    {
+      "name": "Kaiser Plus",
+      "type": "HMO",
+      "tier": "Gold",
+      "provider": "Kaiser Permanente"
+    },
+    {
+      "name": "Humana Starter",
+      "type": "HMO",
+      "tier": "Bronze",
+      "provider": "Humana"
+    },
+    {
+      "name": "Humana Value",
+      "type": "PPO",
+      "tier": "Silver",
+      "provider": "Humana"
+    }
+  ]
+}

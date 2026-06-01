@@ -1,0 +1,54 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Node.js ${{ matrix.node-version }} — ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: ["18.x", "20.x", "22.x"]
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
+
+      - name: Verify package entry point
+        run: |
+          node --input-type=module <<'EOF'
+          import { generatePatient, generateMember, generateEmployee, validatePatient, validateMember, validateEmployee } from './src/index.js';
+          const results = [
+            validatePatient(generatePatient()),
+            validateMember(generateMember()),
+            validateEmployee(generateEmployee()),
+          ];
+          const allValid = results.every(r => r.valid);
+          if (!allValid) {
+            results.forEach(r => r.errors.forEach(e => console.error(e)));
+            process.exit(1);
+          }
+          console.log('Entry point OK — all generators and validators operational');
+          EOF
+
+      - name: Verify npm pack (publish dry-run)
+        run: npm pack --dry-run

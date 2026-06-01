@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm test:*)",
+      "Bash(node examples/random-utils-demo.js)",
+      "Bash(node examples/fixtures-demo.js)",
+      "Bash(node examples/identifiers-demo.js)",
+      "Bash(node examples/patient-demo.js)",
+      "Bash(node examples/member-demo.js)",
+      "Bash(node examples/employee-demo.js)",
+      "Bash(node examples/validation-demo.js)",
+      "Bash(node examples/public-api-demo.js)",
+      "Bash(node examples/playwright/payloads-preview.js)",
+      "Bash(npm pack:*)"
+    ]
+  }
+}

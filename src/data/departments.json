@@ -1,0 +1,29 @@
+{
+  "departments": [
+    { "name": "Emergency Medicine",        "code": "EM"  },
+    { "name": "Internal Medicine",         "code": "IM"  },
+    { "name": "Cardiology",                "code": "CD"  },
+    { "name": "Oncology",                  "code": "ON"  },
+    { "name": "Neurology",                 "code": "NR"  },
+    { "name": "Orthopedics",               "code": "OR"  },
+    { "name": "Pediatrics",                "code": "PD"  },
+    { "name": "Obstetrics & Gynecology",   "code": "OB"  },
+    { "name": "Radiology",                 "code": "RD"  },
+    { "name": "Pathology",                 "code": "PT"  },
+    { "name": "Anesthesiology",            "code": "AN"  },
+    { "name": "Psychiatry",                "code": "PS"  },
+    { "name": "Dermatology",               "code": "DR"  },
+    { "name": "Ophthalmology",             "code": "OP"  },
+    { "name": "General Surgery",           "code": "GS"  },
+    { "name": "Urology",                   "code": "UR"  },
+    { "name": "Gastroenterology",          "code": "GI"  },
+    { "name": "Endocrinology",             "code": "EN"  },
+    { "name": "Infectious Disease",        "code": "ID"  },
+    { "name": "Physical Therapy",          "code": "PH"  },
+    { "name": "Human Resources",           "code": "HR"  },
+    { "name": "Finance",                   "code": "FN"  },
+    { "name": "Information Technology",    "code": "IT"  },
+    { "name": "Administration",            "code": "AD"  },
+    { "name": "Compliance & Legal",        "code": "CL"  }
+  ]
+}

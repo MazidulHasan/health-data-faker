@@ -1,0 +1,60 @@
+{
+  "name": "health-data-faker",
+  "version": "0.1.0",
+  "description": "Domain-specific healthcare/member/employee test data generation library for QA automation, API testing, development seeding, and performance testing. No external dependencies.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src/"
+  ],
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --testPathPattern=tests/"
+  },
+  "keywords": [
+    "healthcare",
+    "health-data",
+    "fake-data",
+    "test-data",
+    "mock-data",
+    "faker",
+    "patient",
+    "member",
+    "employee",
+    "qa",
+    "qa-automation",
+    "api-testing",
+    "data-generation",
+    "seed-data",
+    "performance-testing",
+    "insurance",
+    "ehr",
+    "hipaa",
+    "no-dependencies"
+  ],
+  "author": {
+    "name": "Mazidul Hasan",
+    "email": "",
+    "url": "https://github.com/MazidulHasan"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MazidulHasan/health-data-faker.git"
+  },
+  "homepage": "https://github.com/MazidulHasan/health-data-faker#readme",
+  "bugs": {
+    "url": "https://github.com/MazidulHasan/health-data-faker/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "transform": {}
+  }
+}

@@ -1,0 +1,22 @@
+# Test suite — not needed by consumers
+tests/
+
+# Example scripts — not needed by consumers
+examples/
+
+# Development config
+.github/
+.vscode/
+.idea/
+
+# Environment and local config
+.env
+.env.*
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Editor artifacts
+*.swp
+*.swo
