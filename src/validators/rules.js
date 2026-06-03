@@ -4,7 +4,14 @@
  * Used internally by all validators — not part of the public API.
  */
 
-export const BLOOD_GROUPS    = ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'];
+export const BLOOD_GROUPS         = ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'];
+export const DIAGNOSIS_TYPES      = ['Primary', 'Secondary', 'Comorbidity'];
+export const DIAGNOSIS_STATUSES   = ['Active', 'Resolved', 'Chronic', 'Ruled Out'];
+export const LAB_STATUSES         = ['final', 'preliminary', 'corrected', 'cancelled'];
+export const LAB_INTERPRETATIONS  = ['Normal', 'High', 'Low', 'Critical High', 'Critical Low'];
+export const MEDICATION_STATUSES  = ['Active', 'Discontinued', 'Hold', 'Completed'];
+export const ENCOUNTER_STATUSES   = ['Finished', 'In Progress', 'Planned', 'Cancelled'];
+export const ENCOUNTER_CLASSES    = ['Ambulatory', 'Emergency', 'Inpatient', 'Observation', 'Telehealth'];
 export const MEMBER_STATUSES  = ['Active', 'Inactive', 'Terminated', 'Pending', 'Suspended'];
 export const EMPLOYEE_STATUSES = ['Active', 'On Leave', 'Terminated', 'Probation', 'Resigned'];
 export const PLAN_TYPES       = ['HMO', 'PPO', 'EPO', 'POS', 'HDHP'];

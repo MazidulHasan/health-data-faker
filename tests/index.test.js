@@ -8,9 +8,19 @@ import {
   generatePatient,
   generateMember,
   generateEmployee,
+  generateDiagnosis,
+  generateLabResult,
+  generateMedication,
+  generateVitals,
+  generateEncounter,
   validatePatient,
   validateMember,
   validateEmployee,
+  validateDiagnosis,
+  validateLabResult,
+  validateMedication,
+  validateVitals,
+  validateEncounter,
 } from '../src/index.js';
 
 // ─── Named exports exist ──────────────────────────────────────────────────────
@@ -20,9 +30,19 @@ describe('package exports — named functions exist', () => {
     generatePatient,
     generateMember,
     generateEmployee,
+    generateDiagnosis,
+    generateLabResult,
+    generateMedication,
+    generateVitals,
+    generateEncounter,
     validatePatient,
     validateMember,
     validateEmployee,
+    validateDiagnosis,
+    validateLabResult,
+    validateMedication,
+    validateVitals,
+    validateEncounter,
   };
 
   Object.entries(exports).forEach(([name, fn]) => {
@@ -142,7 +162,7 @@ describe('validators — via public export', () => {
   });
 });
 
-// ─── Generate → validate round-trip ──────────────────────────────────────────
+// ─── Generate → validate round-trip — demographics ───────────────────────────
 
 describe('generate → validate round-trip via public export', () => {
   test('100 random patients all pass validation', () => {
@@ -160,6 +180,40 @@ describe('generate → validate round-trip via public export', () => {
   test('100 random employees all pass validation', () => {
     for (let i = 0; i < 100; i++) {
       expect(validateEmployee(generateEmployee()).valid).toBe(true);
+    }
+  });
+});
+
+// ─── Generate → validate round-trip — clinical ───────────────────────────────
+
+describe('generate → validate round-trip — clinical generators', () => {
+  test('100 random diagnoses all pass validation', () => {
+    for (let i = 0; i < 100; i++) {
+      expect(validateDiagnosis(generateDiagnosis()).valid).toBe(true);
+    }
+  });
+
+  test('100 random lab results all pass validation', () => {
+    for (let i = 0; i < 100; i++) {
+      expect(validateLabResult(generateLabResult()).valid).toBe(true);
+    }
+  });
+
+  test('100 random medications all pass validation', () => {
+    for (let i = 0; i < 100; i++) {
+      expect(validateMedication(generateMedication()).valid).toBe(true);
+    }
+  });
+
+  test('100 random vitals all pass validation', () => {
+    for (let i = 0; i < 100; i++) {
+      expect(validateVitals(generateVitals()).valid).toBe(true);
+    }
+  });
+
+  test('100 random encounters all pass validation', () => {
+    for (let i = 0; i < 100; i++) {
+      expect(validateEncounter(generateEncounter()).valid).toBe(true);
     }
   });
 });

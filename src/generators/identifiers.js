@@ -83,6 +83,86 @@ export function createPolicyNumber({
 }
 
 /**
+ * Generates a Diagnosis ID.
+ * Default format: DX-######  (6-digit zero-padded number)
+ * @param {{ prefix?: string, digits?: number }} options
+ * @returns {string}  e.g. "DX-004821"
+ */
+export function createDiagnosisId({
+  prefix = 'DX',
+  digits = 6,
+} = {}) {
+  if (typeof digits !== 'number' || digits < 1) {
+    throw new Error('createDiagnosisId: digits must be a positive integer');
+  }
+  return `${prefix}-${randomDigits(digits)}`;
+}
+
+/**
+ * Generates a Lab Result ID.
+ * Default format: LAB-######  (6-digit zero-padded number)
+ * @param {{ prefix?: string, digits?: number }} options
+ * @returns {string}  e.g. "LAB-029341"
+ */
+export function createLabId({
+  prefix = 'LAB',
+  digits = 6,
+} = {}) {
+  if (typeof digits !== 'number' || digits < 1) {
+    throw new Error('createLabId: digits must be a positive integer');
+  }
+  return `${prefix}-${randomDigits(digits)}`;
+}
+
+/**
+ * Generates a Medication Record ID.
+ * Default format: MED-######  (6-digit zero-padded number)
+ * @param {{ prefix?: string, digits?: number }} options
+ * @returns {string}  e.g. "MED-118043"
+ */
+export function createMedicationId({
+  prefix = 'MED',
+  digits = 6,
+} = {}) {
+  if (typeof digits !== 'number' || digits < 1) {
+    throw new Error('createMedicationId: digits must be a positive integer');
+  }
+  return `${prefix}-${randomDigits(digits)}`;
+}
+
+/**
+ * Generates a Vitals Record ID.
+ * Default format: VIT-######  (6-digit zero-padded number)
+ * @param {{ prefix?: string, digits?: number }} options
+ * @returns {string}  e.g. "VIT-773291"
+ */
+export function createVitalsId({
+  prefix = 'VIT',
+  digits = 6,
+} = {}) {
+  if (typeof digits !== 'number' || digits < 1) {
+    throw new Error('createVitalsId: digits must be a positive integer');
+  }
+  return `${prefix}-${randomDigits(digits)}`;
+}
+
+/**
+ * Generates an Encounter ID.
+ * Default format: ENC-######  (6-digit zero-padded number)
+ * @param {{ prefix?: string, digits?: number }} options
+ * @returns {string}  e.g. "ENC-509124"
+ */
+export function createEncounterId({
+  prefix = 'ENC',
+  digits = 6,
+} = {}) {
+  if (typeof digits !== 'number' || digits < 1) {
+    throw new Error('createEncounterId: digits must be a positive integer');
+  }
+  return `${prefix}-${randomDigits(digits)}`;
+}
+
+/**
  * Generates a Medical Record Number (MRN).
  * Default format: MRN-######  (6-digit zero-padded number)
  * @param {{ prefix?: string, digits?: number }} options

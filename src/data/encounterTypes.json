@@ -1,0 +1,31 @@
+{
+  "encounterClasses": [
+    { "code": "AMB",    "display": "Ambulatory"  },
+    { "code": "EMER",   "display": "Emergency"   },
+    { "code": "IMP",    "display": "Inpatient"   },
+    { "code": "OBSENC", "display": "Observation" },
+    { "code": "VR",     "display": "Telehealth"  }
+  ],
+  "encounterTypes": [
+    "Office Visit",
+    "Follow-up Visit",
+    "Annual Wellness Visit",
+    "Urgent Care Visit",
+    "Specialty Consultation",
+    "Telehealth Visit",
+    "Procedure Visit",
+    "Preventive Care Visit",
+    "Emergency Visit",
+    "Observation Stay"
+  ],
+  "encounterLocations": [
+    "Hospital",
+    "Outpatient Clinic",
+    "Emergency Room",
+    "Urgent Care Center",
+    "Telehealth Platform",
+    "Physician Office",
+    "Ambulatory Surgery Center",
+    "Specialty Clinic"
+  ]
+}

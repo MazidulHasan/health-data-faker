@@ -1,6 +1,6 @@
 {
   "name": "health-data-faker",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Domain-specific healthcare/member/employee test data generation library for QA automation, API testing, development seeding, and performance testing. No external dependencies.",
   "type": "module",
   "main": "src/index.js",
@@ -32,7 +32,17 @@
     "insurance",
     "ehr",
     "hipaa",
-    "no-dependencies"
+    "no-dependencies",
+    "fhir",
+    "icd-10",
+    "loinc",
+    "rxnorm",
+    "diagnosis",
+    "lab-results",
+    "medication",
+    "vitals",
+    "encounter",
+    "clinical-data"
   ],
   "author": {
     "name": "Mazidul Hasan",

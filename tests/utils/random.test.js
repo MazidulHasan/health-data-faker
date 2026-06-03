@@ -5,6 +5,7 @@ import {
   randomString,
   randomDigits,
   randomDate,
+  randomFloat,
 } from '../../src/utils/random.js';
 
 // ─── randomItem ────────────────────────────────────────────────────────────────
@@ -116,6 +117,38 @@ describe('randomDigits', () => {
 
   test('throws on length < 1', () => {
     expect(() => randomDigits(0)).toThrow();
+  });
+});
+
+// ─── randomFloat ───────────────────────────────────────────────────────────────
+
+describe('randomFloat', () => {
+  test('returns a number within [min, max]', () => {
+    for (let i = 0; i < 100; i++) {
+      const n = randomFloat(1.0, 10.0, 1);
+      expect(n).toBeGreaterThanOrEqual(1.0);
+      expect(n).toBeLessThanOrEqual(10.0);
+    }
+  });
+
+  test('respects decimal precision', () => {
+    for (let i = 0; i < 50; i++) {
+      const n = randomFloat(0, 100, 2);
+      const decimals = (n.toString().split('.')[1] ?? '').length;
+      expect(decimals).toBeLessThanOrEqual(2);
+    }
+  });
+
+  test('works when min === max', () => {
+    expect(randomFloat(5.5, 5.5, 1)).toBe(5.5);
+  });
+
+  test('throws when min > max', () => {
+    expect(() => randomFloat(10, 5)).toThrow();
+  });
+
+  test('throws on non-numeric input', () => {
+    expect(() => randomFloat('1', 10)).toThrow();
   });
 });
 

@@ -75,6 +75,26 @@ export function randomDigits(length) {
 }
 
 /**
+ * Returns a random floating-point number between min and max (inclusive),
+ * rounded to the given number of decimal places.
+ * @param {number} min
+ * @param {number} max
+ * @param {number} [decimals=1]
+ * @returns {number}
+ */
+export function randomFloat(min, max, decimals = 1) {
+  if (typeof min !== 'number' || typeof max !== 'number') {
+    throw new Error('randomFloat requires numeric min and max');
+  }
+  if (min > max) {
+    throw new Error('randomFloat: min must be <= max');
+  }
+  if (min === max) return parseFloat(min.toFixed(decimals));
+  const factor = Math.pow(10, decimals);
+  return Math.round((Math.random() * (max - min) + min) * factor) / factor;
+}
+
+/**
  * Returns a random Date between start and end (inclusive).
  * @param {Date} start
  * @param {Date} end

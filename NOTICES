@@ -1,0 +1,44 @@
+health-data-faker — Third-Party Notices
+=======================================
+
+This package uses the following open-source and open-data standards.
+
+─────────────────────────────────────────────────────────────────────────────
+LOINC® (Logical Observation Identifiers Names and Codes)
+─────────────────────────────────────────────────────────────────────────────
+This product includes LOINC content which is copyright 1995-2024 Regenstrief
+Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC)
+Committee. It is available at no cost under the license found at
+https://loinc.org/license/. LOINC® is a registered United States trademark of
+Regenstrief Institute, Inc.
+
+Files using LOINC codes:
+  src/data/loincLabs.json
+  src/generators/lab.js
+  src/generators/vitals.js
+
+─────────────────────────────────────────────────────────────────────────────
+ICD-10-CM (International Classification of Diseases, 10th Revision,
+           Clinical Modification)
+─────────────────────────────────────────────────────────────────────────────
+ICD-10-CM codes are published by the Centers for Medicare & Medicaid Services
+(CMS) and the National Center for Health Statistics (NCHS). As a US government
+work, this data is in the public domain. Source: https://www.cms.gov/medicare/
+coding-billing/icd-10-codes
+
+Files using ICD-10-CM codes:
+  src/data/icd10Codes.json
+  src/generators/diagnosis.js
+  src/generators/encounter.js
+
+─────────────────────────────────────────────────────────────────────────────
+RxNorm
+─────────────────────────────────────────────────────────────────────────────
+RxNorm is produced by the National Library of Medicine (NLM), National
+Institutes of Health (NIH). RxCUI identifiers included in this package are
+sourced from the NLM RxNorm API and bulk downloads, which are freely available
+for use and redistribution. https://www.nlm.nih.gov/research/umls/rxnorm/
+
+Files using RxNorm data:
+  src/data/medications.json
+  src/generators/medication.js
