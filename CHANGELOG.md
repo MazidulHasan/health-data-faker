@@ -1,3 +1,10 @@
+## [0.5.0](https://github.com/MazidulHasan/health-data-faker/compare/v0.4.0...v0.5.0) (2026-07-21)
+
+
+### Features
+
+* add npm publishing step and update permissions in release workflow ([1298ab5](https://github.com/MazidulHasan/health-data-faker/commit/1298ab5545c18b5bdbb4fad906a72ad7b85c1e6e))
+
 ## [0.4.0](https://github.com/MazidulHasan/health-data-faker/compare/v0.3.0...v0.4.0) (2026-07-21)
 
 
