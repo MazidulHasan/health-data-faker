@@ -1,4 +1,11 @@
-## 0.3.0 (2026-07-21)
+## [0.4.0](https://github.com/MazidulHasan/health-data-faker/compare/v0.3.0...v0.4.0) (2026-07-21)
+
+
+### Features
+
+* update workflows to use latest action versions and add entry point verification script ([650ea3b](https://github.com/MazidulHasan/health-data-faker/commit/650ea3b371df9118835e4adb3804969666f21801))
+
+## [0.3.0](https://github.com/MazidulHasan/health-data-faker/compare/58ddf09acbf4af31204a451e6597f42e6d58e1d7...v0.3.0) (2026-07-21)
 
 
 ### Features
