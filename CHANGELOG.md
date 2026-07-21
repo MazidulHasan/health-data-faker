@@ -1,3 +1,10 @@
+## [0.6.0](https://github.com/MazidulHasan/health-data-faker/compare/v0.5.0...v0.6.0) (2026-07-21)
+
+
+### Features
+
+* add Groq PR review script and workflow for automated pull request reviews ([bdf9cf9](https://github.com/MazidulHasan/health-data-faker/commit/bdf9cf98e00220b7a15c7e9bab92991955b7ddc6))
+
 ## [0.5.0](https://github.com/MazidulHasan/health-data-faker/compare/v0.4.0...v0.5.0) (2026-07-21)
 
 
