@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    name: Node.js ${{ matrix.node-version }} — ${{ matrix.os }}
+    name: Node.js ${{ matrix.node-version }} - ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -19,10 +19,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
@@ -34,21 +34,7 @@ jobs:
         run: npm test
 
       - name: Verify package entry point
-        run: |
-          node --input-type=module <<'EOF'
-          import { generatePatient, generateMember, generateEmployee, validatePatient, validateMember, validateEmployee } from './src/index.js';
-          const results = [
-            validatePatient(generatePatient()),
-            validateMember(generateMember()),
-            validateEmployee(generateEmployee()),
-          ];
-          const allValid = results.every(r => r.valid);
-          if (!allValid) {
-            results.forEach(r => r.errors.forEach(e => console.error(e)));
-            process.exit(1);
-          }
-          console.log('Entry point OK — all generators and validators operational');
-          EOF
+        run: node .github/scripts/verify-entrypoint.mjs
 
       - name: Verify npm pack (publish dry-run)
         run: npm pack --dry-run
